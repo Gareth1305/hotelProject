@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bookingCost: 1.5
+  checkInDate: 2015-01-29
+  checkOutDate: 2015-01-29
+  customer_id: 1
+  room_id: 1
+  hotel_id: 1
+
+two:
+  bookingCost: 1.5
+  checkInDate: 2015-01-29
+  checkOutDate: 2015-01-29
+  customer_id: 1
+  room_id: 1
+  hotel_id: 1

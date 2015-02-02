@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Room Number:</b>
+  <%= @room.roomNum %>
+</p>
+
+<p>
+  <b>Room Floor:</b>
+  <%= @room.roomFloor %>
+</p>
+
+<p>
+  <%= image_tag(@room.roomPic, :size => "150x100") %><br></br><br></br><br></br>
+</p>
+
+<p>
+  <b>Room Type:</b>
+  <%= @room.roomType %>
+</p>
+
+<p>
+  <b>Room Price:</b>
+  <%= @room.roomPrice %>
+</p>
+
+<p>
+  <b>Hotel:</b>
+  <%= @room.hotel.hotelName %>
+</p>
+
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

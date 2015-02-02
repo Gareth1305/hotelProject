@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Booking Cost:</b>
+  <%= @booking.bookingCost %>
+</p>
+
+<p>
+  <b>Check In Date:</b>
+  <%= @booking.checkInDate %>
+</p>
+
+<p>
+  <b>Check Out Date:</b>
+  <%= @booking.checkOutDate %>
+</p>
+
+<p>
+  <b>Customer Name:</b>
+  <%= @booking.customer.custFirstName %>
+</p>
+
+<p>
+  <b>Room Type:</b>
+  <%= @booking.room.roomType %>
+</p>
+
+<p>
+  <b>Hotel Name:</b>
+  <%= @booking.hotel.hotelName %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

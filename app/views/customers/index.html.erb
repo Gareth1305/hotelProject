@@ -1,0 +1,39 @@
+<h1>Customers</h1>
+
+<table>
+  <tr>
+    <th width = "150"><u>First Name</u></th>
+    <th width = "150"><u>Last Name</u></th>
+    <th width = "150"><u>Email</u></th>
+    <th width = "150"><u>DOB</u></th>
+    <th width = "150"><u>Home Phone</u></th>
+    <th width = "150"><u>Mobile</u></th>
+    <th width = "150"><u>Address</u></th>
+    <!--<th>Latitude</th>-->
+    <!--<th>Longitude</th>-->
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @customers.each do |customer| %>
+  <tr>
+    <td><center><%= customer.custFirstName %></center></td>
+    <td><center><%= customer.custLastName %></center></td>
+    <td><center><%= customer.custEmail %></center></td>
+    <td><center><%= customer.custDOB %></center></td>
+    <td><center><%= customer.custPhone %></center></td>
+    <td><center><%= customer.custMobile %></center></td>
+    <td><center><%= customer.custAddress %></center></td>
+    <!--<td><%= customer.latitude %></td>-->
+    <!--<td><%= customer.longitude %></td>-->
+    <td><%= link_to 'Show', customer %></td>
+    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td><%= link_to 'Destroy', customer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Customer', new_customer_path %>

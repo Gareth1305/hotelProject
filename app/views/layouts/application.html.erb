@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotelapp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="banner">
+	<%= image_tag("hotelsign.png", :size => "150x80") %>
+	Hotel
+		<br></br>
+
+</div>
+
+
+<div id="nav">
+    <ul>
+      <li><%= link_to "Hotel", hotels_path%></li>
+      <li><%= link_to "Hotel Room", rooms_path %></li>
+      <li><%= link_to "Customers", customers_path %></li>	
+	  <li><%= link_to "Bookings", bookings_path %></li>	
+    </ul>
+</div>
+
+<%= yield %>
+
+<div id="footer">
+	My Footer
+</div>
+<br></br>
+</body>
+</html>
+

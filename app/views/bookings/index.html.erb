@@ -1,0 +1,32 @@
+<h1>Listing bookings</h1>
+
+<table>
+  <tr>
+    <th width="150"><u>Booking Cost</u></th>
+    <th width="150"><u>Check In Date</u></th>
+    <th width="150"><u>Check Out Date</u></th>
+    <th width="150"><u>Customer Name</u></th>
+    <th width="150"><u>Room Type</u></th>
+	<th width="150"><u>Hotel Name</u></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bookings.each do |booking| %>
+  <tr>
+    <td><center><%= booking.bookingCost %></center></td>
+    <td><center><%= booking.checkInDate %></center></td>
+    <td><center><%= booking.checkOutDate %></center></td>
+    <td><center><%= booking.customer.custFirstName %></center></td>
+    <td><center><%= booking.room.roomType %></center></td>
+	<td><center><%= booking.hotel.hotelName %></center></td>
+    <td><%= link_to 'Show', booking %></center></td>
+    <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
+    <td><%= link_to 'Destroy', booking, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Booking', new_booking_path %>

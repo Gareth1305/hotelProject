@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hotel Name:</b>
+  <%= @hotel.hotelName %>
+</p>
+
+<p>
+  <%= image_tag(@hotel.hotelPicture, :size => "150x100") %><br></br><br></br><br></br>
+</p>
+
+<p>
+  <b>Hotel Location:</b>
+  <%= @hotel.hotelLocation %>
+</p>
+
+<p>
+  <b>Hotel Number:</b>
+  <%= @hotel.hotelPhone %>
+</p>
+
+<p>
+  <b>HotelNumber Of Rooms:</b>
+  <%= @hotel.hotelNumOfRooms %>
+</p>
+
+<p>
+  <b>Hotel Email:</b>
+  <%= @hotel.hotelEmail %>
+</p>
+
+<!--<p>
+  <b>Latitude:</b>
+  <%= @hotel.latitude %>
+</p>-->
+
+<p>
+  <!--<b>Longitude:</b>-->
+  <!--<%= @hotel.longitude %>-->
+</p>
+
+
+<%= link_to 'Edit', edit_hotel_path(@hotel) %> |
+<%= link_to 'Back', hotels_path %>
